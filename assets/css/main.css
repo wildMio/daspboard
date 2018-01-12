@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	box-sizing: border-box;
+}
+
+/* color
+酒紅	#851934
+橘色	#F25E38
+淺藍綠	#80C4AE
+草綠	#92CF48
+藍綠	#023852
+深藍	#071930
+淺紫	#302D43
+深紫	#282639
+淺灰	#F4F6F9
+深灰	#EAEDF3
+*/
+
+body {
+	margin: 0;
+	background: #EAEDF3;
+	font-family: 'Roboto', sans-serif;
+}
+
+.flex-v {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-h {
+	display: flex;
+	flex-direction: row;
+}
+
+.in-b {
+	display: inline-block;
+}
+
+#sideMenu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 280px;
+	background: #023852;
+}
+
+#sideTitle {
+	font-weight: 900;
+	font-size: 3em;
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 2px solid #071930;
+	color: white;
+	margin: 10px;
+}
+
+#sideMenu nav {
+	width: 100%;
+}
+
+#sideMenu nav a {
+	text-decoration: none;
+	font-size: 2em;
+	padding: 10px 0 10px 30px;
+	color: rgb(100, 100, 100);
+	transition:all 250ms ease-in-out;
+}
+
+#sideMenu nav a.active, #sideMenu nav a:hover {
+	background: #071930;
+	color: white;
+	border-left: 5px solid #F25138;
+	padding-left: 25px;
+}
+
+.nav-i {
+	font-size: 1em;
+	width: 40px;
+	transition: all 250ms ease-in-out;
+}
+
+#sideMenu nav a.active .nav-i, #sideMenu nav a:hover .nav-i {
+	color: #F25138;
+}
+
+header {
+	padding-left: 280px;
+	background-color: white;
+	width: 100%;
+	height: 58px;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.search-area, .user-area {
+	margin: auto 10px;
+}
+
+.search-area .fa-search {
+	color: #EAEDF3;
+}
+
+.navtoggle {
+	display: none;
+	color: #F25E38;
+	padding-right: 5px;
+	font-size: 1.5em;
+	position: relative;
+}
+
+.navtoggle:hover, .navtoggle:focus {
+	-webkit-animation: plus 0.3s ease-in-out both;
+	animation: plus 0.3s ease-in-out both; 
+}
+
+@-webkit-keyframes plus {
+	0% {
+		top: 0px;
+	}
+	30% {
+		top: 10px;
+	}
+	100% {
+		top: -22px;
+	}
+}
+
+@keyframes plus {
+	0% {
+		top: 0px;
+	}
+	30% {
+		top: 10px;
+	}
+	100% {
+		top: -22px;
+	}
+}
+
+.search-area input {
+	padding: 5px;
+	font-size: 1.3em;
+	color: #92CF48;
+	background: transparent;
+	font-weight: 100;
+	border: 1px solid #EAEDF3;
+	border-radius: 5px 10px 10px 5px;
+	outline: none;
+	transition: all .5s ease-in-out;
+	width: 
+}
+
+.search-area input:focus {
+	background: #F4F6F9;
+}
+
+.user-area a {
+	position: relative;
+	margin: auto 0;
+	font-size: 1.5em;
+	color: rgb(100, 100, 100);
+	text-decoration: none;
+}
+.user-area a:not(:last-child) {
+	padding-right: 10px;
+}
+
+.cart {
+	position: relative;
+}
+
+.cart .circle {
+	background-color: #851934;
+	padding: 1px;
+	min-width: 12px;
+	max-width: 20px;
+	min-height: 12px;
+	border-radius: 50%;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: -5px;
+	left: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.user-img {
+  background: url("https://camo.mybb.com/e01de90be6012adc1b1701dba899491a9348ae79/687474703a2f2f7777772e6a71756572797363726970742e6e65742f696d616765732f53696d706c6573742d526573706f6e736976652d6a51756572792d496d6167652d4c69676874626f782d506c7567696e2d73696d706c652d6c69676874626f782e6a7067") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  	width: 30px;
+  	height: 30px;
+	border-radius: 50%;
+	position: relative;
+	top: 3px;
+	left: 3px;
+}
+
+@media (max-width: 720px) {
+	#sideMenu {
+		z-index: -1;
+		opacity: 0;
+		width: 100%;
+	}
+
+	header {
+		padding-left: 0;
+	}
+
+	.navtoggle {
+		display: inline-block;
+	}
+
+	.search-area input {
+		max-width: 100px;
+	}
+}
