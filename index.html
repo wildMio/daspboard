@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  	<link rel="manifest" href="/manifest.json">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dashboard</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
@@ -19,6 +21,7 @@
 			<a href="#"><div class="nav-i in-b"><i class="fas fa-code"></i></div> item</a>
 			<a href="#"><div class="nav-i in-b"><i class="fab fa-chrome"></i></div> item</a>
 		</nav>
+		<div id="copyright"><i class="far fa-copyright"></i> wildMio</div>
 	</section>
 
 	<header class="flex-h">
@@ -31,7 +34,7 @@
 			<a href="#">+ Add</a>
 			<a href="#">
 				<div class="cart in-b">
-					<i class="fas fa-cart-plus"></i>
+					<i class="fas fa-shopping-cart"></i></i>
 					<span class="circle">88</span>
 				</div>
 			</a>
@@ -41,6 +44,70 @@
 			</a>
 		</div>
 	</header>
+
+	<section class="content-area">
+		<div class="news-board">
+			<button> < </button>
+			<button> > </button>
+			<a href="#"><img src="http://www.caco3.url.tw/caco/TOP/BNR/180112_SpecialOffer_1400X653.jpg"></a>
+		</div>
+		<div class="item-size">
+			<div class="item">
+				<img src="http://roushphoto.com.tw/done/715605-images/477x477/715605_army_green.jpg" class="item-img">
+				<div class="item-name">MA-1灰綠色連帽鋪棉飛行外套</div>
+				<div class="item-dollar">NT. 1,180</div>
+				<div class="item-stock">
+					<button class="active">S</button>
+					<button>M</button>
+					<button>L</button>
+					<button>XL</button>
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<span>數量: </span>
+				</div>
+				<div class="item-action">
+					<div class="item-like">
+						<i class="fas fa-heart"></i>
+						<div class="action-hint">加入到收藏</div>
+					</div>
+					<div class="item-buy">
+						<i class="fas fa-cart-plus"></i>
+						<div class="action-hint">放入購物車</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item-size">
+			<div class="item">
+				item
+			</div>
+		</div>
+		<div class="item-size">
+			<div class="item">
+				item
+			</div>
+		</div>
+		<div class="item-size">
+			<div class="item">
+				item
+			</div>
+		</div>
+		<div class="item-size">
+			<div class="item">
+				item
+			</div>
+		</div>
+		<div class="item-size">
+			<div class="item">
+				item
+			</div>
+		</div>
+	</section>
 	
 
 	<script type="text/javascript" src="assets/js/main.js"></script>
