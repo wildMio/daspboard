@@ -33,3 +33,8 @@ header, .content-area {
 .item-size {
 	flex-basis: 100%;
 }
+
+.item-img {
+  width: auto;
+  max-height: 60vh;
+}

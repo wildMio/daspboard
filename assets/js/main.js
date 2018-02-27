@@ -2,7 +2,23 @@ const nav = document.querySelector('#sideMenu');
 const nav_links = nav.querySelectorAll('a');
 const item_stocks = document.querySelectorAll('.item-stock button');
 const user_area = document.querySelector('.user-area');
+const user_area_a = user_area.querySelectorAll('a');
 const user_tools = user_area.querySelectorAll('.user-tools');
+let tools_index = 0;
+
+for(let link of user_area_a) {
+	link.nextElementSibling.style.visibility = 'hidden';
+	link.addEventListener('click', function() {
+		if(link.nextElementSibling.style.visibility === 'hidden'){
+			user_tools.forEach((tool) => {
+				tool.style.visibility = 'hidden';
+			});
+			link.nextElementSibling.style.visibility = 'visible';
+		}
+		else
+			link.nextElementSibling.style.visibility = 'hidden';
+	});
+}
 
 // Shim for requestAnimationFrame from Paul Irishpaul ir
 // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
